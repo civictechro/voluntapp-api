@@ -1,0 +1,33 @@
+# import Skill from "../skill/schema.graphql"
+# import Project from "../project/schema.graphql"
+# import Error from "../../shared.graphql"
+
+type Query {
+	user(id: ID): User!
+	users: [User!]
+}
+
+type Mutation {
+  	createUser(
+		name: String!
+		email: String!
+		photo: String
+		phone: String
+		location: String
+		job: String
+  	): User
+	generateUser: User
+}
+
+type User {
+	id: ID!
+	name: String!
+	email: String!
+	photo: String
+	phone: String
+	location: String
+	job: String
+	skills: [Skill!]
+	projectsMember: [Project!]
+	projectsCreator: [Project!]
+}

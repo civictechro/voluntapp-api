@@ -1,0 +1,20 @@
+# import Error from "../../shared.graphql"
+# import User from "../user/schema.graphql"
+
+type Query {
+	project(id: ID): Project!
+	projects: [Project!]
+}
+
+type Mutation {
+  	createProject(userId: ID!, name: String!, description: String!): Project
+	addProjectMember(id: ID!, userId: ID!): User
+}
+
+type Project {
+	id: ID!
+	name: String!
+	description: String!
+	creator: User!
+	members: [User!]
+}

@@ -1,0 +1,18 @@
+# import Error from "../../shared.graphql"
+# import User from "../user/schema.graphql"
+
+type Query {
+	skill(id: ID): Skill!
+	skills: [Skill!]
+}
+
+type Mutation {
+  	createSkill(id: ID!, label: String!): Skill
+  	addSkill(id: ID!, userId: ID!): User
+	generateSkill: Skill
+}
+
+type Skill {
+	id: ID!
+	label: String!
+}
