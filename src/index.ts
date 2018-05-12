@@ -9,5 +9,7 @@ createConnection().then(() => {
   });
 
   server.start();
-  console.log('Server is running on localhost ' + process.env.POST || 4000);
+  if (!process.env.POST){
+    console.log('Server is running on localhost 4000');
+  }
 });
