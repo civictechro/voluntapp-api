@@ -1,12 +1,15 @@
-{
+module.exports = {
    "type": "postgres",
-   "host": "localhost",
+   "host": process.env.DB_HOST,
    "port": 5432,
-   "username": "voluntapp",
-   "password": "voluntapp",
-   "database": "voluntapp",
+   "username": process.env.DB_USERNAME,
+   "password": process.env.DB_PASSWORD,
+   "database": process.env.DB_DATABASE,
    "synchronize": true,
    "logging": true,
+   "extra": {
+        "ssl": true
+   },
    "entities": [
       "src/entity/**/*.ts"
    ],
