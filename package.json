@@ -11,10 +11,8 @@
       "@types/yup": "^0.24.3",
       "gql2ts": "^1.8.0",
       "nodemon": "^1.17.4",
-      "ts-node": "^6.0.3",
       "tslint": "^5.10.0",
-      "tslint-config-prettier": "^1.12.0",
-      "typescript": "^2.8.3"
+      "tslint-config-prettier": "^1.12.0"
    },
    "dependencies": {
       "@gql2ts/from-schema": "^1.8.0",
@@ -31,7 +29,9 @@
       "reflect-metadata": "^0.1.12",
       "typeorm": "0.2.5",
       "uuid": "^3.2.1",
-      "yup": "^0.24.1"
+      "yup": "^0.24.1",
+      "ts-node": "^6.0.3",
+      "typescript": "^2.8.3"
    },
    "scripts": {
       "start": "NODE_ENV=prod ts-node src/index.ts",
